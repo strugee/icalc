@@ -1,5 +1,7 @@
+CC=gcc
+
 bin/main: bin main.c
-	gcc $(CCFLAGS) -o bin/main main.c
+	$(CC) $(CCFLAGS) -Wall -g -o bin/main main.c
 
 bin/:
 	mkdir -p bin

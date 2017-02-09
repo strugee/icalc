@@ -6,9 +6,10 @@ int get_oper_type()
 {
 	printf("What kind of operation would you like to perform? [asmd] ");
 
-	char oper_type = getchar();
+	char oper_type[3];
+	fgets(oper_type, 3, stdin);
 
-	switch (oper_type) {
+	switch (oper_type[0]) {
 	case 'a':
 		return OPER_ADD;
 	case 's':
